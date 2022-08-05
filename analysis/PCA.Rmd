@@ -1,0 +1,26 @@
+---
+title: "PCA"
+author: "alinemarcalrossinolufv"
+date: "2022-08-05"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+# Principal Analysis with iris data set
+
+## Colecting data
+```{r}
+data <- data("iris")
+```
+## Carregando a biblioteca
+```{r}
+library("tidyverse")
+```
+## Realizando a Analise 
+```{r}
+iris %>% ggplot(aes(x=Species, y=Sepal.Length, fill= Species))+
+  geom_boxplot()+
+  theme(legend.position = "none")
+```
+
